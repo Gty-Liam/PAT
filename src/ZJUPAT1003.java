@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class ZJUPAT1003{
-    private static int noOfPath = 0;  //最短路径的数量
+class Main{
+    private static int noOfPath = 1;  //最短路径的数量
     private static int shortestLength = 1000000000;
     private static int totalRescue = 0;
     private static int cityNo;
@@ -33,44 +33,50 @@ class ZJUPAT1003{
             map[i][2] = scan.nextInt();
         }
         List<Integer> startPointNeighbor = getNeighborPoint(startPoint);
-        for(int i=0;i<startPointNeighbor.size();i++){
-            List<Integer> passPoint = new ArrayList<>();
-            passPoint.add(startPoint);
-            pathSearching(startPoint, startPointNeighbor.get(i), getTwoPointLength(startPoint,startPointNeighbor.get(i)), 0, passPoint, rescue[startPoint]);
+        if(startPoint != endPoint) {  //少考虑了起点就是终点的问题...折腾了很久
+            for (int i = 0; i < startPointNeighbor.size(); i++) {
+                List<Integer> passPoint = new ArrayList<>();
+                passPoint.add(startPoint);
+                pathSearching(startPointNeighbor.get(i), getTwoPointLength(startPoint, startPointNeighbor.get(i)), 0, passPoint, rescue[startPoint]);
+            }
+        } else {
+            totalRescue = rescue[startPoint];
         }
         System.out.println(noOfPath+" "+totalRescue);
     }
 
-    public static void pathSearching(int start, int end, int twoPointsLength, int currentLength, List<Integer> passPoint, int currentRescue){
-        if(end == endPoint){
+    public static void pathSearching(int end, int twoPointsLength, int currentLength, List<Integer> passPoint, int currentRescue) {
+        if (currentLength > shortestLength)
+            return;
+        if (end == endPoint) {
             currentLength += twoPointsLength;
             currentRescue += rescue[endPoint];
-            if (currentLength < shortestLength){  //刷新最小距离
+            if (currentLength < shortestLength) {  //刷新最小距离
                 noOfPath = 1;
                 shortestLength = currentLength;
                 totalRescue = currentRescue;
             } else if (currentLength == shortestLength) {
-                noOfPath ++;
-                if(currentRescue > totalRescue){
+                noOfPath++;
+                if (currentRescue > totalRescue) {
                     totalRescue = currentRescue;
                 }
             }
-        } else {
-            if(passPoint.contains(end)){
-                //重复即形成环路,do nothing
-            } else {
-                start = end; //走到end点
-                currentLength += twoPointsLength;
-                currentRescue += rescue[end];
-                passPoint.add(end);
-                List<Integer> neighborPointList = getNeighborPoint(end);
-                for(int i=0;i<neighborPointList.size();i++){
-                    pathSearching(end, neighborPointList.get(i), getTwoPointLength(end,neighborPointList.get(i)), currentLength, passPoint, currentRescue);
-                }
-
+            return;
+        }
+        if (!passPoint.contains(end)) {
+            //start = end; //走到end点
+            currentLength += twoPointsLength;
+            currentRescue += rescue[end];
+            passPoint.add(end);
+            List<Integer> neighborPointList = getNeighborPoint(end);
+            for (int i = 0; i < neighborPointList.size(); i++) {
+                pathSearching(neighborPointList.get(i), getTwoPointLength(end, neighborPointList.get(i)), currentLength, new ArrayList<>(passPoint), currentRescue);
             }
         }
     }
+
+
+
     public static List<Integer> getNeighborPoint(int point) {
         List<Integer> neighbor = new ArrayList<>();
         for(int i=0;i<roadNo;i++){
@@ -93,7 +99,6 @@ class ZJUPAT1003{
                     return map[i][2];
             }
         }
-        System.out.println("ERROR 两点之间没有路");
-        return 0;
+        return 100000;
     }
 }
