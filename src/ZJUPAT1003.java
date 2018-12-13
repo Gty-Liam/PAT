@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class Main{
+class ZJUPAT1003 {
     private static int noOfPath = 1;  //最短路径的数量
     private static int shortestLength = 1000000000;
     private static int totalRescue = 0;
@@ -23,17 +23,17 @@ class Main{
         startPoint = scan.nextInt();
         endPoint = scan.nextInt();
         rescue = new int[cityNo];
-        for(int i=0;i<cityNo;i++){
+        for (int i = 0; i < cityNo; i++) {
             rescue[i] = scan.nextInt();
         }
         map = new int[roadNo][3];
-        for(int i=0;i<roadNo;i++) {
+        for (int i = 0; i < roadNo; i++) {
             map[i][0] = scan.nextInt();
             map[i][1] = scan.nextInt();
             map[i][2] = scan.nextInt();
         }
         List<Integer> startPointNeighbor = getNeighborPoint(startPoint);
-        if(startPoint != endPoint) {  //少考虑了起点就是终点的问题...折腾了很久
+        if (startPoint != endPoint) {  //少考虑了起点就是终点的问题...折腾了很久
             for (int i = 0; i < startPointNeighbor.size(); i++) {
                 List<Integer> passPoint = new ArrayList<>();
                 passPoint.add(startPoint);
@@ -42,7 +42,7 @@ class Main{
         } else {
             totalRescue = rescue[startPoint];
         }
-        System.out.println(noOfPath+" "+totalRescue);
+        System.out.println(noOfPath + " " + totalRescue);
     }
 
     public static void pathSearching(int end, int twoPointsLength, int currentLength, List<Integer> passPoint, int currentRescue) {
@@ -76,25 +76,24 @@ class Main{
     }
 
 
-
     public static List<Integer> getNeighborPoint(int point) {
         List<Integer> neighbor = new ArrayList<>();
-        for(int i=0;i<roadNo;i++){
-            if(map[i][0] == point){
+        for (int i = 0; i < roadNo; i++) {
+            if (map[i][0] == point) {
                 neighbor.add(map[i][1]);
-            } else if(map[i][1] == point){
+            } else if (map[i][1] == point) {
                 neighbor.add(map[i][0]);
             }
         }
         return neighbor;
     }
 
-    public static int getTwoPointLength(int a, int b){
-        for(int i=0;i<roadNo;i++){
-            if(map[i][0] == a){
-               if(map[i][1] == b)
-                   return map[i][2];
-            } else if(map[i][0] == b) {
+    public static int getTwoPointLength(int a, int b) {
+        for (int i = 0; i < roadNo; i++) {
+            if (map[i][0] == a) {
+                if (map[i][1] == b)
+                    return map[i][2];
+            } else if (map[i][0] == b) {
                 if (map[i][1] == a)
                     return map[i][2];
             }
