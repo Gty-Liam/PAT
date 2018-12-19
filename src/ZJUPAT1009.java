@@ -2,7 +2,7 @@
  * 1009 Product of Polynomials
  * start: 2018年12月10日21:08:54
  * end: 2018年12月10日22:03:19
- * 考点：Map(dictionary), Map->Iter
+ * 考点：Map(dictionary), Map的迭代方式，保留小数
  */
 
 
