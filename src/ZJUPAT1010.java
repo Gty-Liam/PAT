@@ -7,10 +7,10 @@ import java.util.Scanner;
  * 考点：进制转换
  */
 class Main {
-    static String N1 = "jiho2";  //作为radix表示的进制
-    static String N2 = "lh";
-    static int which = 1;
-    static long radix = 36;
+    static String N1;  //作为radix表示的进制
+    static String N2;
+    static int which;
+    static long radix;
     static long resultRadix;
     static long top; //大的数
     static long bottom;

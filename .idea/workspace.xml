@@ -16,7 +16,7 @@
     <session id="-365594891">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="2" />
@@ -37,25 +37,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11948" />
+          <entry key="java" value="11956" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11948" />
+          <entry key="JAVA" value="11956" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="26" />
+          <entry key="java" value="27" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="26" />
+          <entry key="JAVA" value="27" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -131,8 +131,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ZJUPAT1010.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="32" lean-forward="true" selection-end-line="73" />
+            <state relative-caret-position="116">
+              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -168,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/PSOTest.java" />
         <option value="$PROJECT_DIR$/src/DynamicProgramming.java" />
         <option value="$PROJECT_DIR$/src/ZJUPAT1003.java" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/ZJUPAT1004.java" />
         <option value="$PROJECT_DIR$/src/ZJUTPAT1005.java" />
         <option value="$PROJECT_DIR$/src/ZJUPAT1006.java" />
@@ -176,6 +184,7 @@
         <option value="$PROJECT_DIR$/src/ZJUPAT1008.java" />
         <option value="$PROJECT_DIR$/src/ZJUPAT1009.java" />
         <option value="$PROJECT_DIR$/src/ZJUPAT1010.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
       </list>
     </option>
   </component>
@@ -307,7 +316,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Test">
     <configuration default="true" type="Application" factoryName="应用程序">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -318,8 +327,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZJUPAT1005" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ZJUPAT1005" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="PAT" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -363,14 +372,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ZJUPAT1005" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.ZJUPAT1006" />
       <item itemvalue="Application.ZJUPAT1007" />
       <item itemvalue="Application.ZJUPAT1008" />
+      <item itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -412,11 +422,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78876000" />
+    <option name="totallyTimeSpent" value="80669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="设计师" order="0" />
       <window_info id="Learn" order="1" />
@@ -434,7 +443,7 @@
       <window_info anchor="bottom" id="调试" order="6" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.1778742" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.1778742" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.28741866" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -530,23 +539,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/Map.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/text/DecimalFormat.java" />
     <entry file="file://$PROJECT_DIR$/src/ZJUPAT1004.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ZJUPAT1005.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,10 +584,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ZJUPAT1005.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ZJUPAT1010.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="32" lean-forward="true" selection-end-line="73" />
+        <state relative-caret-position="116">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
         </state>
       </provider>
     </entry>
